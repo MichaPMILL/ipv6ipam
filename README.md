@@ -1,7 +1,7 @@
 # Ip6 class
 To do : create the app :) 
 Only for educationnal purposes. Don't use in production environnement without modifications. 
-That class gives possibilty to handle IPv6 addresses block using PHP.  
+That class gives possibilty to handle IPv6 addresses blocks using PHP.  
 That class allows for example to condense or to give a prefix in its expanded form and to cut blocks.
 
 ## Builder
