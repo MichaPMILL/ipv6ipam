@@ -22,7 +22,7 @@ $expanded = $block->prefixeDecondense();
 ## Condensing prefix
 ```PHP
 $condensed = $block->prefixeCondense();
-// returns $expanded => 2001:db8::
+// returns $condensed => 2001:db8::
 ````
 ## Binary prefix
 ```PHP
