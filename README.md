@@ -35,8 +35,8 @@ $wseparators = $block->prefixeExt();
 ````
 ## "Subnet cutting" 
 ```PHP
-//Parameter : int subnet size
-$subnet = $block->sousReseaux(x);
+//Parameter : int subnet size ($x) 
+$subnet = $block->sousReseaux($x);
 ````
 It returns an array of iP6 objects with the desired size. 
 
