@@ -1,9 +1,11 @@
 <?php
 class Ip6 {
+    private $id;
     private $prefixe;
     private $longueur;
 
-    public function __construct(String $prefixe, int $longueur){
+    public function __construct(int $id, String $prefixe, int $longueur){
+        $this->id = $id;
         $this->prefixe = $prefixe;
         $this->longueur = $longueur; 
     }
@@ -12,6 +14,9 @@ class Ip6 {
     }
     public function getLongueur():int{
         return $this->longueur;
+    }
+    public function getId():int{
+        return $this->id;
     }
     public function displayPrefixeCIDR():String{
         return $this->prefixe."/".$this->longueur;
@@ -149,7 +154,7 @@ class Ip6 {
             $c32 = substr($binVal, 124, 4);
             $valeurHex = self::binHex($c1).self::binHex($c2).self::binHex($c3).self::binHex($c4).self::binHex($c5).self::binHex($c6).self::binHex($c7).self::binHex($c8).self::binHex($c9).self::binHex($c10).self::binHex($c11).self::binHex($c12).self::binHex($c13).self::binHex($c14).self::binHex($c15).self::binHex($c16).self::binHex($c17).self::binHex($c18).self::binHex($c19).self::binHex($c20).self::binHex($c21).self::binHex($c22).self::binHex($c23).self::binHex($c24).self::binHex($c25).self::binHex($c26).self::binHex($c27).self::binHex($c28).self::binHex($c29).self::binHex($c30).self::binHex($c31).self::binHex($c32);
             $temp_prefixe = inet_ntop(hex2bin($valeurHex));
-            $tableauHex[]= new self ($temp_prefixe,$tailleSouhait);
+            $tableauHex[]= new self (NULL,$temp_prefixe,$tailleSouhait);
         }
         return $tableauHex;
     }
